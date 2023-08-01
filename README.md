@@ -1,5 +1,24 @@
 # FlareSolverr Workaround Patch 8/1/23
 
+To run you can just do python3 src/flaresolverr.py to test things out. 
+
+Here's a simple systemd config so that it stays running:
+
+```
+[Service]
+ExecStart=python3 /the/path/to/flaresolverr/src/flaresolverr.py
+Restart=always
+StandardOutput=file:/var/log/cloudflare_proxy.log
+StandardError=file:/var/log/cloudflare_proxy.error.log
+User=digitalnomad91
+Group=digitalnomad91
+Environment=NODE_ENV=production
+
+
+[Install]
+WantedBy=multi-user.target
+```
+
 Note: I haven't tested running it through a new docker image / container, but it should work just fine. I'll include a systemd service implementation for those that want to run it standalone.
 
 Working implementation of this 3rd patch for undetect_chromedriver (single python file):

@@ -1,3 +1,8 @@
+# Offical Repo PR:
+Apologies for this non-forked repo btw, I ran into some issues with 403 errors and initially I thought it was related to not being able to push to the offical fork, however it ended up being that my SSH key had just expired lol. Here's an actual PR:
+
+https://github.com/FlareSolverr/FlareSolverr/pull/842
+
 # FlareSolverr Workaround Patch 8/1/23
 
 To run you can just do python3 src/flaresolverr.py to test things out. 
